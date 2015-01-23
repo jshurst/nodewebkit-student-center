@@ -1,0 +1,10 @@
+{
+    "userName": "StudentUser",
+    "password": "student",
+    "server": "localhost",
+    "options": {
+        "encrypt": false,
+        "database": "StudentCenter",
+        "camelCaseColumns" : true
+    }
+}

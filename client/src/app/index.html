@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="format-detection" content="telephone=no">
+    <meta charset="UTF-8">
+
+    <meta name="description" content="Violate Responsive Admin Template">
+    <meta name="keywords" content="Super Admin, Admin, Template, Bootstrap">
+
+    <title>StudentCenter</title>
+
+    <!-- CSS -->
+    <link href="../../vendor/themes/SuperAdmin/1-0-3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../vendor/themes/SuperAdmin/1-0-3/css/animate.min.css" rel="stylesheet">
+    <link href="../../vendor/themes/SuperAdmin/1-0-3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../vendor/themes/SuperAdmin/1-0-3/css/form.css" rel="stylesheet">
+    <link href="../../vendor/themes/SuperAdmin/1-0-3/css/calendar.css" rel="stylesheet">
+    <link href="../../vendor/themes/SuperAdmin/1-0-3/css/style.css" rel="stylesheet">
+    <link href="../../vendor/themes/SuperAdmin/1-0-3/css/icons.css" rel="stylesheet">
+    <link href="../../vendor/themes/SuperAdmin/1-0-3/css/generics.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+
+
+    <script src="../../vendor/jquery/jquery-2.1.1.min.js"></script>
+    <script src="../../vendor/misc/toastr.min.js"></script>
+    <script src="../../vendor/bootstrap/bootstrap.min.js"></script>
+    <script src="../../vendor/angular/angular.min.js"></script>
+    <script src="../../vendor/angular/angular-route.min.js"></script>
+    <script src="../../vendor/bootstrap/ui-bootstrap-tpls-0.11.2.min.js"></script>
+
+    <script src="shared/menu.js"></script>
+    <script src="app.js"></script>
+    <script src="shared/services/NotificationService.js"></script>
+    <script src="shared/services/UserService.js"></script>
+    <script src="shared/services/DataService.js"></script>
+    <script src="shared/services/SettingsService.js"></script>
+    <script src="shared/services/DataConfigService.js"></script>
+    <script src="person/PersonService.js"></script>
+    <script src="person/PersonCtrl.js"></script>
+    <script src="address/AddressCtrl.js"></script>
+    <script src="address/AddressService.js"></script>
+    <script src="search/SearchCtrl.js"></script>
+    <script src="search/SearchService.js"></script>
+    <script src="dashboard/DashboardCtrl.js"></script>
+
+
+    <script src="../../vendor/themes/SuperAdmin/1-0-3/js/jquery-ui.min.js"></script>
+    <!--<script src="js/jquery.easing.1.3.js"></script>  jQuery Easing - Required for Lightbox + Pie Charts-->
+    <script src="../../vendor/themes/SuperAdmin/1-0-3/js/bootstrap.min.js"></script>
+    <!--<script src="js/icheck.js"></script>  Custom Checkbox + Radio -->
+    <script src="../../vendor/themes/SuperAdmin/1-0-3/js/scroll.min.js"></script>
+    <script src="../../vendor/themes/SuperAdmin/1-0-3/js/functions.js"></script>
+</head>
+
+<body id="skin-blur-violate" data-ng-app="studentCenterApp">
+
+    <div data-ng-include="'shared/templates/header.html'"></div>
+
+    <div class="clearfix"></div>
+
+    <div data-ng-view></div>
+
+</body>
+
+</html>

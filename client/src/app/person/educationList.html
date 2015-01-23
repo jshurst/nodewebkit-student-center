@@ -1,0 +1,49 @@
+<div class="col-sm-12">
+    <div class="tile">
+        <h2 class="tile-title">
+            <a href="adfasdf">Education History &nbsp;&nbsp;(+)</a>
+        </h2>
+        <div class="p-10">
+            <table class="table table-bordered table-hover tile table-condensed">
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Grade Level</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-ng-repeat="e in vm.education">
+                        <td>
+                            {{e.gradeYear}}
+                        </td>
+                        <td>
+                            {{e.gradeLevel}}
+                        </td>
+                        <td>
+                            <a href="#">Edit</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!--<div class="row row-padded">
+                <div class="col-sm-2">
+                    Grade Level:
+                </div>
+                <div class="col-sm-10">
+                    <input class="form-control" data-ng-model="vm.education.gradeLevel" type="text" />
+                </div>
+            </div>
+            <div class="row row-padded">
+                <div class="col-sm-2">
+                    Graduation Date:
+                </div>
+                <div class="col-sm-10">
+                    <input class="form-control" data-ng-model="vm.person.graduationYear" type="text" />
+                </div>
+            </div>
+            </div>-->
+        </div>
+    </div>
+</div>

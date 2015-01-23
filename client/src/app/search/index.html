@@ -1,0 +1,118 @@
+<br />
+<br />
+
+<div class="col-sm-12" data-ng-controller="SearchCtrl as vm">
+    <form data-ng-submit="vm.searchPerson()">
+    <div class="tile">
+        <h2 class="tile-title">
+            Search
+        </h2>
+        <div class="p-10">
+            <div class="row row-padded">
+                <div class="col-sm-1">
+                    <span class="span-sm-align">Id:</span>
+                </div>
+                <div class="col-sm-3">
+                    <input class="form-control input-sm" data-ng-model="vm.personSearch.personId" type="text">
+                </div>
+                 <div class="col-sm-1">
+                    <span class="span-sm-align">Gender:</span>
+                </div>
+                <div class="col-sm-3">
+                    <select id="me" class="form-control input-sm">
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </div>
+                <div class="col-sm-1">
+                    <span class="span-sm-align">Year of Birth</span>
+                </div>
+                <div class="col-sm-3">
+                    <input class="form-control input-sm" data-ng-model="vm.personSearch.birthYear" type="text">
+                </div>
+            </div>
+            <div class="row row-padded">
+                <div class="col-sm-1">
+                    <span class="span-sm-align">First:</span>
+                </div>
+                <div class="col-sm-3">
+                    <input class="form-control input-sm" data-ng-model="vm.personSearch.firstName" type="text">
+                </div>
+                <div class="col-sm-1">
+                    <span class="span-sm-align">Middle:</span>
+                </div>
+                <div class="col-sm-3">
+                    <input class="form-control input-sm" data-ng-model="vm.personSearch.middleName" type="text">
+                </div>
+                <div class="col-sm-1">
+                    <span class="span-sm-align">Last:</span>
+                </div>
+                <div class="col-sm-3">
+                    <input class="form-control input-sm" data-ng-model="vm.personSearch.lastName" type="text">
+                </div>
+            </div>
+        </div>
+
+        <input type="submit" class="btn" data-ng-click="vm.searchPerson()" value="Search" />
+        <button class="btn" data-ng-click="vm.searchPersonReset($event)">Clear</button>
+    </div>
+        </form>
+    <!--Results-->
+     <div class="tile" data-ng-show="vm.personSearchResults.length > 0">
+        <h2 class="tile-title">
+            Search Results
+        </h2>
+        <div class="p-10">
+         <table class="table table-bordered table-hover tile table-condensed">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Type</th>
+                        <th>Active</th>
+                        <th>First Name</th>
+                        <th>Middle Name</th>
+                        <th>Last Name</th>
+                        <th>Birth Year</th>
+                        <th>Graduation Year</th>
+                        <th>Picture</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-ng-repeat="result in vm.personSearchResults">
+                        <td>
+                            {{result.personId}}
+                        </td>
+                        <td>
+                             {{result.description}}
+                        </td>
+                        <td>
+                             {{result.active}}
+                        </td>
+                        <td>
+                             {{result.firstName}}
+                        </td>
+                        <td>
+                             {{result.middleName}}
+                        </td>
+                        <td>
+                             {{result.lastName}}
+                        </td>
+                        <td>
+                             {{result.birthYear}}
+                        </td>
+                        <td>
+                             {{result.gradutionYear}}
+                        </td>
+                        <td>
+                            ...
+                        </td>
+                        <td>
+                            <a href="#/person/view/{{result.personId}}">View</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+</div>

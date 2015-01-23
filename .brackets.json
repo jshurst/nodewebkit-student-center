@@ -1,0 +1,8 @@
+{
+    "jscodehints.detectedExclusions": [
+        "C:/Users/Jeremy/Desktop/student-center/client/vendor/themes/SuperAdmin/1-0-3/js/toggler.min.js",
+        "C:/Users/Jeremy/Desktop/student-center/client/vendor/themes/SuperAdmin/1-0-3/js/superbox.min.js",
+        "C:/Users/Jeremy/Desktop/student-center/client/vendor/themes/SuperAdmin/1-0-3/js/spinner.min.js",
+        "C:/Users/Jeremy/Desktop/student-center/client/vendor/themes/SuperAdmin/1-0-3/js/sparkline.min.js"
+    ]
+}

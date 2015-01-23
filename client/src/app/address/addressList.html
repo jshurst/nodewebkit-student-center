@@ -1,0 +1,44 @@
+<div class="col-sm-12">
+    <div id="addyId" class="tile">
+        <h2 class="tile-title">
+            Address History
+            <a data-ng-click="vm.addAddress()">&nbsp;&nbsp;(&nbsp;add&nbsp;)&nbsp;&nbsp;</a>
+        </h2>
+        <div class="p-10">
+            <table class="table table-bordered table-hover tile table-condensed">
+                <thead>
+                    <tr>
+                        <th>Village</th>
+                        <th>Street</th>
+                        <th>Postal Code</th>
+                        <th>Region</th>
+                        <th>Country</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-ng-repeat="addy in vm.address">
+                        <td>
+                            {{addy.village}}
+                        </td>
+                        <td>
+                            {{addy.street}}
+                        </td>
+                        <td>
+                            {{addy.postalCode}}
+                        </td>
+                        <td>
+                            {{addy.region}}
+                        </td>
+                        <td>
+                            {{addy.country}}
+                        </td>
+                        <td>
+                            <a data-ng-click="vm.editAddress(addy)">Edit</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

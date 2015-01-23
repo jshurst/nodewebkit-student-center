@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <script src="../../../vendor/jquery/jquery-2.1.1.min.js"></script>
+</head>
+
+<body>
+    <button onclick="test()">Click Me!</button>
+    <br />
+    <table style="border: 1px black solid;">
+        <tr>
+            <td style="border: 1px black solid;">
+                This is a test!
+            </td>
+            <td style="border: 1px black solid;">
+                This is another test.
+            </td>
+        </tr>
+    </table>
+    <script>
+        function test() {
+            var html = $('html').html();
+            var wkhtmltopdf = require('wkhtmltopdf');
+            //This either needs to be 
+            wkhtmltopdf.command = "C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe";
+
+            var gui = require('nw.gui');
+            var fs = require('fs');
+            var ds = "/";
+            if (process.platform.match(/^win/)) {
+                ds = "\\";
+            }
+            var pathfrags = process.execPath.split(ds);
+            var APPDIR = '';
+            // Get rid of filename
+            for (var i = 0; i < pathfrags.length - 1; i++) {
+                APPDIR += pathfrags[i] + ds;
+            }
+            var filePath = APPDIR + 'JeremyTest.pdf';
+
+            //print to pdf
+            wkhtmltopdf(html, {
+                output: filePath
+            }, function (code, signal) {
+                gui.Shell.openItem(filePath);
+            });
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<style type="text/css">
+    .span-sm-align {
+        line-height: 30px;
+    }
+</style>
+
+<div class="col-sm-12">
+    <div class="tile">
+        <h2 class="tile-title">
+            <a href="adfasdf">Name History</a>
+        </h2>
+        <div class="p-10">
+            <div id="postRender" post-render firstName="{{vm.person.firstName}}"></div>
+            <div class="row row-padded">
+                <div class="col-sm-2">
+                    <span class="span-sm-align">Id:</span>
+                </div>
+                <div class="col-sm-10">
+                    <input class="form-control input-sm" data-ng-model="vm.person.personId" type="text" disabled="disabled">
+                </div>
+            </div>
+            <div class="row row-padded">
+                <div class="col-sm-2">
+                    <span class="span-sm-align">First:</span>
+                </div>
+                <div class="col-sm-10">
+                    <input class="form-control input-sm" data-ng-model="vm.person.firstName" type="text">
+                </div>
+            </div>
+            <div class="row row-padded">
+                <div class="col-sm-2">
+                    <span class="span-sm-align">Middle:</span>
+                </div>
+                <div class="col-sm-10">
+                    <input class="form-control input-sm" data-ng-model="vm.person.middleName" type="text">
+                </div>
+            </div>
+            <div class="row row-padded">
+                <div class="col-sm-2">
+                    <span class="span-sm-align">Last:</span>
+                </div>
+                <div class="col-sm-10">
+                    <input class="form-control input-sm" data-ng-model="vm.person.lastName" type="text">
+                </div>
+            </div>
+            <div class="row row-padded">
+                <div class="col-sm-2">
+                    <span class="span-sm-align">Gender:</span>
+                </div>
+                <div class="col-sm-10">
+                    <select id="me" class="form-control input-sm">
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row row-padded">
+                <div class="col-sm-2">
+                    <span class="span-sm-align">DOB:</span>
+                </div>
+                <div class="col-sm-2">
+                    <input class="form-control input-sm" data-ng-model="vm.person.birthMonth" type="text">
+                </div>
+                <div class="col-sm-2">
+                    <input class="form-control input-sm" data-ng-model="vm.person.birthDay" type="text">
+                </div>
+
+                <div class="col-sm-2">
+                    <input class="form-control input-sm" data-ng-model="vm.person.birthYear" type="text">
+                </div>
+                <div class="col-sm-2">
+                    <span class="span-sm-align">Age: {{vm.person.age}}</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

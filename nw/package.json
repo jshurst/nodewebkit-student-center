@@ -1,0 +1,11 @@
+{
+    "name": "StudentCenter",
+    "description": "Simple student center application.",
+    "main": "../client/src/app/index.html#/dashboard",
+    "chromium-args": "--auth-schemes='digest,ntlm,negotiate,basic'",
+    "window": {
+        "toolbar": true,
+        "width": 1024,
+        "height": 768
+    }
+}

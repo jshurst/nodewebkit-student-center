@@ -1,0 +1,18 @@
+<aside id="sidebar">
+
+    <!-- Sidbar Widgets -->
+    <div class="side-widgets overflow">
+        <!-- Profile Menu -->
+        <div class="text-center s-widget m-b-25 dropdown" id="profile-menu">
+            <a href="" data-toggle="dropdown">
+                <!--The image below appears to be relative from the index.html not the sidebar.html-->
+                <img class="profile-pic animated" data-ng-src="{{vm.personPictureLocation}}\{{vm.personPictures[0].fileName}}" alt="Pictures">
+            </a>
+            <h4 class="m-0">{{vm.person.firstName}}</h4>
+            <br />
+            <br />
+            <img class="profile-pic" data-ng-repeat="pic in vm.personPictures" data-ng-src="{{vm.personPictureLocation}}\{{pic.fileName}}" data-ng-if="!$first" alt="Pictures">
+        </div>
+    </div>
+
+</aside>
